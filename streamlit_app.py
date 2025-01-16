@@ -8,11 +8,11 @@ st.write(
     """
 )
 
-from snowflake.snowpark.functions import col
+#from snowflake.snowpark.functions import col
 
 cnx = st.connection("snowflake")
 session = cnx.session()
-my_dataframe = session.table("smoothies.public.fruit_options").select(col('fruit_name'))
+my_dataframe = session.table("smoothies.public.fruit_options").select(session.col('fruit_name'))
 #st.dataframe(data=my_dataframe, use_container_width=True)
 
 ingredient_list = st.multiselect("Choose upto 5 ingredients :",my_dataframe)
