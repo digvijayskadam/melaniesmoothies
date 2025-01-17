@@ -1,4 +1,7 @@
-# requirement.txt
-streamlit
-snowflake-snowpark-python
-snowflake-cli-labs==2.2.0
+name: app_environment
+channels:
+  - snowflake
+dependencies:
+  - python=3.8.*
+  - snowflake-snowpark-python=
+  - streamlit=
